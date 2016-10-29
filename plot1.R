@@ -34,5 +34,6 @@ plot(plot1data$year, plot1data$Emissions,
      xlab = "Year",
      ylab = "Tons of PM2.5 emissions",
      main = "Total PM 2.5 Emissions by Year")
+dev.off()
 
 # Total PM2.5 emissions decreased from 1999 to 2008.
