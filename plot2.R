@@ -18,3 +18,28 @@ NEI$type <- as.factor(NEI$type)
 ## Replace levels of SCC with names?
 #levels(NEI$SCC)
 
+
+# Plot
+## Have total emissions from PM2.5 decreased in Baltimore City, MD from 1999 to 2008?
+## Use the base plotting system to make a plot answering this question.
+## Baltimore City, MD FIPS = 24510
+
+## Isolate Baltimore data
+plot2data <- subset(NEI, fips==24510)
+
+## Sum emissions by year
+plot2data <- 
+      plot2data %>% 
+      group_by(year) %>%
+      summarize(Emissions = sum(Emissions))
+
+## Make plot
+png(plot2.png)
+plot(plot2data$year, plot2data$Emissions, 
+     type = "l",
+     xlab = "Year",
+     ylab = "Tons of PM2.5 emissions",
+     main = "Total PM 2.5 Emissions by Year in Baltimore")
+dev.off()
+
+# Total PM2.5 emissions in Baltimore mostly decreased from 1999 to 2008.
