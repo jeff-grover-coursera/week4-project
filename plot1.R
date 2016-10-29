@@ -1,3 +1,6 @@
+# Preamble
+library(tidyverse)
+
 # Import data
 wd <- "/Users/jeffgrover/Dropbox/Coursera/4 Exploratory Data Analysis/week4-project"
 setwd(wd)
@@ -17,6 +20,8 @@ NEI$type <- as.factor(NEI$type)
 
 
 # Plot
-# Have total emission from PM2.5 decreased in the US from 1999 to 2008?
-# Use the base plotting system, plot the total PM2.5 emission from all sources
-# for each of the years 1999, 2002, 2005, and 2008.
+## Have total emission from PM2.5 decreased in the US from 1999 to 2008?
+## Use the base plotting system, plot the total PM2.5 emission from all sources
+## for each of the years 1999, 2002, 2005, and 2008.
+
+## Sum emissions by year
