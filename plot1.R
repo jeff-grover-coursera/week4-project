@@ -20,8 +20,22 @@ NEI$type <- as.factor(NEI$type)
 
 
 # Plot
-## Have total emission from PM2.5 decreased in the US from 1999 to 2008?
+## Have total emissions from PM2.5 decreased in the US from 1999 to 2008?
 ## Use the base plotting system, plot the total PM2.5 emission from all sources
 ## for each of the years 1999, 2002, 2005, and 2008.
 
 ## Sum emissions by year
+plot1data <- 
+      NEI %>% 
+      group_by(year) %>%
+      summarize(Emissions = sum(Emissions))
+
+## Make plot
+png(plot1.png)
+plot(plot1data$year, plot1data$Emissions, 
+     type = "l",
+     xlab = "Year",
+     ylab = "Tons of PM2.5 emissions",
+     main = "Total PM 2.5 Emissions by Year")
+
+# Total PM2.5 emissions decreased from 1999 to 2008.
