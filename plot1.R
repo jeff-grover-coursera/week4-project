@@ -15,9 +15,6 @@ NEI$SCC <- as.factor(NEI$SCC)
 NEI$Pollutant <- as.factor(NEI$Pollutant)
 NEI$type <- as.factor(NEI$type)
 
-## Replace levels of SCC with names?
-#levels(NEI$SCC)
-
 
 # Plot
 ## Have total emissions from PM2.5 decreased in the US from 1999 to 2008?
