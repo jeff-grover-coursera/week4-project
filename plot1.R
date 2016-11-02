@@ -28,7 +28,7 @@ plot1data <-
       summarize(Emissions = sum(Emissions))
 
 ## Make plot
-png(plot1.png)
+png("plot1.png")
 plot(plot1data$year, plot1data$Emissions, 
      type = "l",
      xlab = "Year",
