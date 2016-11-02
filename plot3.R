@@ -31,3 +31,6 @@ png("plot3.png")
 ggplot(plot3data, aes(x=year, y=Emissions)) +
       geom_line(aes(color = type))
 dev.off()
+
+# Total emissions from non-point, non-road, and on-road sources have decreased from 1999 to 2008.
+# Total emissions from point sources increased from 1999 to 2005, then decreased from 2005 to 2008.
