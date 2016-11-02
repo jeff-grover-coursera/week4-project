@@ -24,6 +24,6 @@ SCC.code.EI.Sector <- select(SCC, SCC, EI.Sector)
 NEI.EI.Sector <- merge(NEI, SCC.code.EI.Sector, by="SCC", all.x=TRUE)
 
 ## Isolate coal combustion observations
-NEI.EI.Sector$coal.observations <- grepl("- Coal", toString(NEI.EI.Sector$EI.Sector))
+NEI.EI.Sector$sector <- toString(NEI.EI.Sector$EI.Sector)
 plot4data <- NEI.EI.Sector %>%
       filter(NEI.EI.Sector$EI.Sector)))
