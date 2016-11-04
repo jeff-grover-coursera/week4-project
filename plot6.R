@@ -47,4 +47,6 @@ with(plot6data, {
      })
 dev.off()
 
-## Total motor vehicle emissions in Baltimore City have decreased from 1999 to 2008.
+## Total motor vehicle emissions in Baltimore City decreased by 258 tons from 1999 to 2008.
+## During the same time, motor vehicle emissions increased by 170 tons in LA County.
+## Thus, Baltimore City saw the greatest change in motor vehicle emissions.
