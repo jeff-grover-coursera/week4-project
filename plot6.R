@@ -39,10 +39,11 @@ with(plot6data, {
      plot(year, Emissions, 
      type = "n", 
      xlab = "Year",
-     ylab = "Total Motor Vehicle Emissions (tons)", 
+     ylab = "Tons of emissions", 
      main = "Total Motor Vehicle Emissions in Baltimore City and LA County from 1999-2008")
      lines(year[fips==24510], Emissions[fips==24510], col="blue")
      lines(year[fips=="06037"], Emissions[fips=="06037"], col="red") # For some reason, 24510 turned into an integer but 06037 stayed as a string
+     legend("center",col=c("blue","red"), pch=20, legend=c("Baltimore City", "Los Angeles County"))
      })
 dev.off()
 

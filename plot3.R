@@ -29,7 +29,10 @@ plot3data <- NEI %>%
 
 png("plot3.png")
 ggplot(plot3data, aes(x=year, y=Emissions)) +
-      geom_line(aes(color = type))
+      geom_line(aes(color = type)) +
+      labs(x = "Year",
+           y = "Tons of emissions",
+           title = "Four types of sources of PM2.5 emissions in Baltimore City")
 dev.off()
 
 # Total emissions from non-point, non-road, and on-road sources have decreased from 1999 to 2008.

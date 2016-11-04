@@ -36,7 +36,7 @@ png("plot5.png")
 with(plot5data, plot(year, Emissions,
                      type = "l",
                      xlab = "Year",
-                     ylab = "Total Motor Vehicle Emissions in Baltimore City",
+                     ylab = "Tons of PM2.5 emissions",
                      main = "Total Motor Vehicle Emissions in Baltimore City from 1999-2008")
 )
 dev.off()

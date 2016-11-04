@@ -35,8 +35,8 @@ png("plot4.png")
 plot(plot4data$year, plot4data$Emissions, 
           type = "l",
           xlab = "Year",
-          ylab = "Tons of Coal Combustion-Related emissions",
-          main = "Total Coal Combustion-Related Emissions by Year")
+          ylab = "Tons of emissions",
+          main = "Total Coal Combustion-Related 2.5 Emissions by Year")
 dev.off()
 
 ## Total coal combustion-related emissions have decreased from 1999 to 2008.
