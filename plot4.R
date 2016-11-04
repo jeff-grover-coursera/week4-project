@@ -1,5 +1,6 @@
 # Preamble
 library(tidyverse)
+library(stringr)
 
 # Import data
 wd <- "/Users/jeffgrover/Dropbox/Coursera/4 Exploratory Data Analysis/week4-project"
@@ -20,10 +21,10 @@ NEI$type <- as.factor(NEI$type)
 ## Across the United States, how have emissions from coal combustion-related sources changed from 1999-2008?
 
 ## Add EI.Sector variable from SCC dataset to NEI dataset
-SCC.code.EI.Sector <- select(SCC, SCC, EI.Sector)
-NEI.EI.Sector <- merge(NEI, SCC.code.EI.Sector, by="SCC", all.x=TRUE)
+SCC.code.EI.Sector <- select(SCC, SCC, EI.Sector) # Takes a minute
+NEI.EI.Sector <- merge(NEI, SCC.code.EI.Sector, by="SCC", all.x=TRUE) #Also takes a minute
 
 ## Isolate coal combustion observations
 NEI.EI.Sector$sector <- toString(NEI.EI.Sector$EI.Sector)
 plot4data <- NEI.EI.Sector %>%
-      filter(NEI.EI.Sector$EI.Sector)))
+      filter(str_detect(EI.Sector, "Coal"))
